@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(layout="wide")
+st.title("Sam Richards - Home")
 
 col1, col2 = st.columns(2)
 
@@ -34,6 +35,3 @@ with col4:
         st.write(row["description"])
         st.image("images/" + row["image"])
         st.write(f"[Source Code]({row['url']})")
-
-
-
