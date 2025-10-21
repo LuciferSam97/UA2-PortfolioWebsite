@@ -1,0 +1,53 @@
+[server]
+enableStaticServing = true
+
+[[theme.fontFaces]]
+family = "DelugiaMonoComplete"
+url = "app/static/fonts/DelugiaMonoComplete.ttf"
+style = "normal"
+weight = 700
+
+[[theme.fontFaces]]
+family = "DelugiaMonoCompleteItalic"
+url = "app/static/fonts/DelugiaMonoCompleteItalic.ttf"
+style = "italic"
+weight = 700
+
+[[theme.fontFaces]]
+family = "DelugiaMonoCompleteBold"
+url = "app/static/fonts/DelugiaMonoCompleteBold.ttf"
+style = "bold"
+weight = 700
+
+[[theme.fontFaces]]
+family = "DelugiaMonoCompleteBoldItalic"
+url = "app/static/fonts/DelugiaMonoCompleteBoldItalic.ttf"
+style = "bolditalic"
+weight = 700
+
+[[theme.fontFaces]]
+family = "DelugiaMonoCompleteLight"
+url = "app/static/fonts/DelugiaMonoCompleteLight.ttf"
+style = "light"
+weight = 700
+
+[[theme.fontFaces]]
+family = "DelugiaMonoCompleteLightItalic"
+url = "app/static/fonts/DelugiaMonoCompleteLightItalic.ttf"
+style = "lightitalic"
+weight = 700
+
+[theme]
+font = "DelugiaMonoComplete"
+primaryColor = "#cb785c"
+backgroundColor = "#ffecd9" #pale orange
+secondaryBackgroundColor = "#e3b7a6" #dirty pink-orange sidebar
+textColor = "#38231f"
+linkColor = "#3d3a2a"
+borderColor = "#8c1958" #deep pink
+showWidgetBorder = true
+baseRadius = "0.75rem"
+buttonRadius = "full"
+headingFontWeights = [700,600,500,500,500,500]
+headingFontSizes = ["3rem", "2rem"]
+showSidebarBorder = true

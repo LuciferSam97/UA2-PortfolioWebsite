@@ -1,7 +1,7 @@
 import smtplib, ssl
 import os
 
-def send_mail(receiver, body, subject):
+def send_mail(sender, body, subject):
     host = "smtp.gmail.com"
     port = 465
 
@@ -15,4 +15,4 @@ def send_mail(receiver, body, subject):
 
     with smtplib.SMTP_SSL(host=host, port=port, context=context) as server:
         server.login(username, password)
-        server.sendmail(username, receiver, message)
+        server.sendmail(username, sender, message)

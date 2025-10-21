@@ -2,7 +2,7 @@
 
 ---
 
-![Static Badge](https://img.shields.io/badge/Languages-python-blue)
+![Static Badge](https://img.shields.io/badge/Languages-Python-blue)
 
 ---
 ## Description
