@@ -19,7 +19,7 @@ pages = [
     st.Page(
         page="contact_me.py",
         title="Contact Me",
-        icon=":material/contact_page:",
+        icon=":material/mail:",
     )
 ]
 

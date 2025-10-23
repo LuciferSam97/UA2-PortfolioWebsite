@@ -9,7 +9,7 @@ st.divider()
 cols = st.columns((0.2, 2, 0.2, 2, 0.2))
 
 with cols[1].container(horizontal_alignment="center", vertical_alignment="center"):
-    st.image("images/photo.png", caption="Me on the day of my graduation from Cambridge", use_container_width=True)
+    st.image("images/photo.png", caption="Me on the day of my graduation from Cambridge", width="stretch")
 
 with cols[3].container(horizontal_alignment="center", vertical_alignment="center", border=10):
     st.header("About me")

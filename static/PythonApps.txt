@@ -1,0 +1,6 @@
+Below you can find the apps I built in python as part of Ardit Sulce's [Python Mega-Course](https://www.udemy.com/course/the-python-mega-course/).
+I've made an effort to format the README markdown files as professionally as possible although given the nature of these
+projects as educational endeavours rather than purpose-driven applications designed and created entirely by me, there were
+certain limitations to what the READMEs could reasonably contain. I have many ideas for personal projects to work on and
+these will be appearing on this page as they are developed and completed. Hopefully these will be give a clearer representation
+of my ability as a programmer and my management of code repositories.
