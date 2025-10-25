@@ -1,6 +1,17 @@
 import streamlit as st
 import pandas as pd
-from cards import display_app
+
+# FUNCTION LIBRARY
+
+def display_app(index : int):
+    df = pd.read_csv("static/new_data.csv", sep=";")
+
+    i = index % len(df)
+    st.header(df.loc[df.index == i]["app_title"].squeeze())
+    st.write(df.loc[df.index == i]["description"].squeeze())
+    st.image(df.loc[df.index == i]["image"].squeeze())
+    st.link_button(label="Source Code", url=f"{df.loc[df.index == i]['git_url'].squeeze()}", icon=":material/folder_code:")
+
 
 def slide_session_reset():
     if "slide_count" not in st.session_state:
@@ -26,7 +37,8 @@ def udemy_apps(udemy_key : str):
 
     cols = st.columns((0.5, 2, 0.5))
     with cols[1].container(horizontal_alignment="center", vertical_alignment="center"):
-        view_options = st.pills("", options=["All", "Slideshow"], default="All", key=udemy_key)
+        view_options = st.pills(label="App View Option", options=["All", "Slideshow"],
+                                label_visibility="hidden", default="All", key=udemy_key)
 
     if view_options == "All":
         slide_session_reset()
@@ -71,13 +83,14 @@ def personal_apps():
         content1 = file.read()
     st.markdown(content1)
 
+# PAGE CONSTRUCTION
 
 st.title("Python Apps")
 
 page_view = [":material/list: All", ":material/school: Udemy Course Apps", ":material/terminal: Personal Projects"]
 
-select_view = st.segmented_control(label="", options=page_view, default=":material/list: All",
-                                   selection_mode="single", on_change=view_options_reset)
+select_view = st.segmented_control(label="Page View Option", options=page_view, default=":material/list: All",
+                                   selection_mode="single", on_change=view_options_reset, label_visibility="hidden")
 st.divider()
 
 if select_view == ":material/list: All":

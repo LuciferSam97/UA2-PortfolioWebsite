@@ -1,8 +1,8 @@
 import smtplib, ssl
 from email.message import EmailMessage
-import os
+import streamlit as st
 
-APP_PASSWORD = os.getenv('PORTFOLIO_GMAIL_PASS')
+APP_PASSWORD = st.secrets['PORTFOLIO_GMAIL_PASS']
 APP_EMAIL = "spmportfoliowebsite@gmail.com"
 
 def send_mail(sender, body, subject):
@@ -35,6 +35,3 @@ Email from: {sender}
             return True
         except (smtplib.SMTPHeloError, smtplib.SMTPRecipientsRefused, smtplib.SMTPSenderRefused, smtplib.SMTPDataError, smtplib.SMTPNotSupportedError):
             return False
-
-if __name__ == '__main__':
-    print(APP_PASSWORD)
