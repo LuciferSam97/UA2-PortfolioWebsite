@@ -20,7 +20,7 @@ st.divider()
 
 st.header("Masters Dissertation")
 st.markdown("This is a dissertation on symmetry and supersymmetry with a distinctly geometrical flavour. "
-            "I've also included the academic poster I created as part of the project. I am aware of some errors in both"
+            "I've also included the academic poster I created as part of the project. I am aware of some errors in both "
             "of these and hope to find some time to address these in the future.")
 
 diss_cols = st.columns(2)
