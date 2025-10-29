@@ -14,7 +14,7 @@ st.pdf(data="static/documents/CV.pdf",
 
 with open("static/documents/CV.pdf", "rb") as file:
     st.download_button(label=":material/download: Download PDF", data=file,
-                       file_name="sam_richards_CV", mime="application/pdf", key="CV_pdf")
+                       file_name="sam_richards_CV.pdf", mime="application/pdf", key="CV_pdf")
 
 st.divider()
 
@@ -31,14 +31,14 @@ with diss_cols[0].container(width=600):
            height=600)
     with open("static/documents/SUSY_Dissertation.pdf", "rb") as file:
         st.download_button(label=":material/download: Download PDF", data=file,
-                           file_name="sam_richards_SUSY_dissertation", mime="application/pdf", key="Diss_pdf")
+                           file_name="sam_richards_SUSY_dissertation.pdf", mime="application/pdf", key="Diss_pdf")
 
 with diss_cols[1].container(width=600):
     st.subheader("Poster")
     st.image(image="static/documents/Superspace_Poster.jpg",)
     with open("static/documents/Superspace_Poster.pdf", "rb") as file:
         st.download_button(label=":material/download: Download PDF", data=file,
-                           file_name="sam_richards_SUSY_poster", mime="application/pdf", key="Poster_pdf")
+                           file_name="sam_richards_SUSY_poster.pdf", mime="application/pdf", key="Poster_pdf")
 
 st.divider()
 
