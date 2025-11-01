@@ -34,8 +34,8 @@ def udemy_apps(udemy_key : str):
 
     with open("static/PythonApps.txt", "r") as f:
         content = f.read()
-    st.markdown(content)
-    st.page_link(page="contact_me.py", label="Please feel free to contact me for more information!")
+    st.markdown(content + " \n\n [Please feel free to contact me for more information!]"
+                          "(https://sam-richards-mathphys.streamlit.app/contact_me)")
 
     cols = st.columns((0.5, 2, 0.5))
     with cols[1].container(horizontal_alignment="center", vertical_alignment="center"):
