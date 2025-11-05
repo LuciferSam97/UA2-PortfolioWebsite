@@ -40,9 +40,9 @@ def udemy_apps(udemy_key : str):
     cols = st.columns((0.5, 2, 0.5))
     with cols[1].container(horizontal_alignment="center", vertical_alignment="center"):
         view_options = st.pills(label="App View Option", options=["All", "Slideshow"],
-                                label_visibility="hidden", default="All", key=udemy_key)
+                                label_visibility="hidden", key=udemy_key)
 
-    if view_options == "All":
+    if view_options == "All" or view_options is None:
         slide_session_reset()
         col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
         data_frame = pd.read_csv("static/new_data.csv", sep=";")
