@@ -12,17 +12,21 @@ The purpose of this project is to be a place where all the applications/scripts 
 ### What does this project do?
 The home page provides a short introduction to myself, and automatically generates the list of applications I created during the course, with the data (including app names, images, github links etc) being read using pandas from a csv file. The website also includes a "contact me" page which allows users to email me directly from the webpage.
 ### What did I learn?
-During this project I learnt how to build multipage streamlit websites, read csv data structures using pandas, and gained experience using Python's built-in smtplib module.
+During this project I learnt how to build multipage streamlit websites, read csv data structures using pandas, and gained experience using Python's built-in smtplib module. Note that long after the first version of this app, I massively expanded it, separating the homepage from the page where the apps are displayed, and adding a documents page. I also restructured the application to run through the streamlit_app.py file which manages the pages rather than using a separate 'Pages' directory. I also wrote proper config.toml and secrets.toml files.
 
 ## Usage
 
+The home page:
+
+![The home page of my website](assets/images/UA2.1.png)
+
 To view the GitHub repository for a given application simply click the link below the application's description!
 
-<!-- ![alt text](assets/images/homepage.png) -->
+![The app-display page on my website](assets/images/UA2.3.png)
 
 Email me directly using the contact me web-form!
 
-<!-- ![alt text](assets/images/homepage.png) -->
+![The contact page on my website](assets/images/UA2.2.png)
 
 ## Credits
 
