@@ -25,7 +25,7 @@ def slide_session_reset():
 def view_options_reset():
     if "view_option" not in st.session_state:
         pass
-    elif st.session_state["view_option"] == "Slideshow":
+    elif st.session_state["view_option"] != "All":
         st.session_state["view_option"] = "All"
 
 
