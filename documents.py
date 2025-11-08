@@ -55,3 +55,6 @@ with cert_cols[0].container(width=600):
 with cert_cols[1].container(width=600):
     st.subheader("Certificate from the University of Cambridge")
     st.image(image="static/documents/Cambridge_cert.jpg", use_container_width=True)
+
+st.subheader("Certificate from Udemy for completion of the Python Course")
+st.image(image="static/documents/udemy_cert.jpg")
