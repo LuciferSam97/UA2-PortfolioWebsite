@@ -1,0 +1,19 @@
+This is a very simple streamlit web-app which plots random walks subject to data entered by the user. The p_value
+denotes the probability of the walk stepping down in a given event. The default starting position of the walk is 0,
+however this can be changed to another float value, or to a random value selected from a given interval. Reflective
+boundaries can also be added, either symmetrically (e.g. 10 would place a reflective boundary at -10 and 10) or
+anti-symmetrically (lower and upper bounds are chosen individually.)
+
+This app began life as a playful exercise, attempting to turn the code given [here](https://www.rpgroup.caltech.edu/aph161/assets/tut/t3/t03_stochastic_simulations.html)
+into a series of methods performed on a single random walk object. Further changes to the RandomWalk class were
+implemented when coupling it to a streamlit UI, e.g. the returnObj option when plotting. I also found the caltech method
+for computing a given walk's interaction with a boundary to be a bit limited, so I wrote a new, more general method that
+e.g. allows for walks where the initial condition interval straddles a boundary, without the need for additional specialised
+methods.
+
+The RandomWalk instance receives its parameters from the "walk_API" dictionary in the session_state and is then stored in the session_state itself. This
+assures that there is a clean interface between the data inputted by the user and that which is fed to the RandomWalk
+class, allowing for easier handling of errors and preventing changes from appearing until the user applies them by
+clicking the "Update" button. Until otherwise updated, the plot will show a default random walk; starting at 0, and
+running for 100 steps with `p_value = 0.5` and no boundaries, simulated 100 times. The "Reset" button returns the plot
+to displaying this default, and clears the fields. If you wish to clear the fields without resetting the plot, click refresh.

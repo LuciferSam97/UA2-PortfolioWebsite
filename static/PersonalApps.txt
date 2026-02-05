@@ -1,5 +1,7 @@
-Currently, this section is empty however I am currently working to expand my skill-set to include experience with
-numerical analysis and NumPy, data analysis and scikit, and I also hope to explore some quantum computing with Qiskit.
-I also plan on gaining a more comprehensive understanding of HTML and CSS, and learning a bit of Javascript. Eventually,
-I would like to re-create this website from the ground up with more control over its design, behaviour, features, and
-performance.
+This section will gradually fill with various bits of code, applications, and programs as I work on practicing and
+expanding my skill-set, in particular improving my experience with essential modules such as Pandas, matplotlib, NumPy,
+SciPy and Scikit. My interest is predominantly in mathematical modelling and physics simulations, however it will take
+some time before these are reasonably expressed by work appearing on this page. At some point in the future, I'd also
+like to gain a more comprehensive understanding of HTML and CSS, and learning a bit of Javascript. Eventually, I would
+like to re-create this website, most likely using Flask or Django, with more control over its design, behaviour,
+features, and performance.

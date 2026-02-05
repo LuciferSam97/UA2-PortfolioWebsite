@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout="wide", initial_sidebar_state="expanded")
+from static.my_apps.random_walks import st_view as stv
 
 # FUNCTION LIBRARY
 
@@ -85,7 +85,20 @@ def personal_apps():
         content1 = file.read()
     st.markdown(content1)
 
+    st.divider()
+    st.subheader("Plotting Random Walks")
+    with open("static/my_apps/random_walks/description.txt", "r") as file:
+        content2 = file.read()
+    st.markdown(content2)
+    st.link_button(label="Random Walk Code", url=f"https://github.com/LuciferSam97/OOPRandomWalks/blob/caltech_random_walks/caltech_stochastic_sim.py", icon=":material/folder_code:")
+    st.link_button(label="Streamlit UI Code", url=f"https://github.com/LuciferSam97/OOPRandomWalks/blob/caltech_random_walks/st_view.py", icon=":material/folder_code:")
+    with st.expander("Use the app!"):
+        stv.main()
+
+
 # PAGE CONSTRUCTION
+
+st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 st.title("Python Apps")
 
