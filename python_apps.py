@@ -90,8 +90,11 @@ def personal_apps():
     with open("static/my_apps/random_walks/description.txt", "r") as file:
         content2 = file.read()
     st.markdown(content2)
-    st.link_button(label="Random Walk Code", url=f"https://github.com/LuciferSam97/OOPRandomWalks/blob/caltech_random_walks/caltech_stochastic_sim.py", icon=":material/folder_code:")
-    st.link_button(label="Streamlit UI Code", url=f"https://github.com/LuciferSam97/OOPRandomWalks/blob/caltech_random_walks/st_view.py", icon=":material/folder_code:")
+    source_buttons = st.columns(2)
+    with source_buttons[0].container(vertical_alignment="center", horizontal_alignment="center"):
+        st.link_button(label="Random Walk Code", url=f"https://github.com/LuciferSam97/OOPRandomWalks/blob/caltech_random_walks/caltech_stochastic_sim.py", icon=":material/folder_code:")
+    with source_buttons[1].container(vertical_alignment="center", horizontal_alignment="center"):
+        st.link_button(label="Streamlit UI Code", url=f"https://github.com/LuciferSam97/OOPRandomWalks/blob/caltech_random_walks/st_view.py", icon=":material/folder_code:")
     with st.expander("Use the app!"):
         stv.main()
 
